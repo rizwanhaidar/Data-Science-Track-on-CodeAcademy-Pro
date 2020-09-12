@@ -1,0 +1,26 @@
+select * from met
+limit 10;
+
+SELECT count(*)
+FROM met
+where department = 'American Decorative Arts';
+
+SELECT count(*)
+FROM met
+where category = 'celery';
+
+SELECT count(*)
+FROM met
+where category like '%celery%';
+
+
+SELECT date, title, medium
+FROM met
+WHERE date LIKE (select min(date) from met);
+
+SELECT count(*) from met
+where country != 'United States'
+group by country
+order by count(id) desc
+limit 10;
+
