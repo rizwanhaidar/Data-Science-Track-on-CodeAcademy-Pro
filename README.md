@@ -8,6 +8,7 @@
 link to files : 
 ## 1 : https://github.com/rizwanhaidar/Data-Science-Track-on-CodeAcademy-Pro/blob/master/trends%20in%20startups.txt
 ## 2 : https://github.com/rizwanhaidar/Data-Science-Track-on-CodeAcademy-Pro/blob/master/Hacker%20News
+## 3 : https://github.com/rizwanhaidar/Data-Science-Track-on-CodeAcademy-Pro/blob/master/The%20Metropolitan%20Museum%20of%20Art
 This modeule covers the basic aggregate function 
 such as: SUM(), AVG(), MIN(), MAX(), ROUND(), COUNT() e.t.c
 
