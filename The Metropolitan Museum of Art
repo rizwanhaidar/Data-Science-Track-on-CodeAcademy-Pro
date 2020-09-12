@@ -28,3 +28,15 @@ SELECT category, COUNT(*)
 FROM met
 GROUP BY 1
 HAVING COUNT(*) > 100;
+
+
+SELECT CASE
+   WHEN medium LIKE '%gold%'   THEN 'Gold'
+   WHEN medium LIKE '%silver%' THEN 'Silver'
+   ELSE NULL
+  END AS 'Bling',
+  COUNT(*)
+FROM met
+WHERE Bling IS NOT NULL
+GROUP BY 1
+ORDER BY 2 DESC;
