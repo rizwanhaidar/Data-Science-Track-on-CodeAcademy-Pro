@@ -24,3 +24,7 @@ group by country
 order by count(id) desc
 limit 10;
 
+SELECT category, COUNT(*)
+FROM met
+GROUP BY 1
+HAVING COUNT(*) > 100;
