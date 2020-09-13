@@ -4,3 +4,7 @@ FROM transactions;
 
 SELECT SUM(money_in)
 FROM transactions;
+
+
+SELECT SUM(money_out)
+FROM transactions;
