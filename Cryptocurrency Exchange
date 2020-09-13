@@ -1,2 +1,6 @@
 SELECT *
 FROM transactions;
+
+
+SELECT SUM(money_in)
+FROM transactions;
