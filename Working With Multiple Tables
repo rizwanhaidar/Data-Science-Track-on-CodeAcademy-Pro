@@ -1,0 +1,22 @@
+# equie Join
+
+select * 
+from orders, subscriptions 
+where orders.subscription_id = subscriptions.subscription_id;
+
+# equie Join With some conditions
+
+select * 
+from orders, subscriptions 
+where orders.subscription_id = subscriptions.subscription_id 
+AND subscriptions.description = 'Fashion Magazine';
+
+#Something on Inner Join
+SELECT COUNT(*)
+FROM newspaper;
+SELECT COUNT(*)
+FROM online;
+select count(distinct newspaper.id) 
+from newspaper, online
+where newspaper.id = online.id;
+
