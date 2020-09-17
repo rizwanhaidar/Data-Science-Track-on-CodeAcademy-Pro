@@ -20,3 +20,14 @@ select count(distinct newspaper.id)
 from newspaper, online
 where newspaper.id = online.id;
 
+#left join
+
+select * 
+from newspaper
+left join online
+on newspaper.id = online.id;
+select * 
+from newspaper
+left join online
+on newspaper.id = online.id 
+where online.id IS NULL;
