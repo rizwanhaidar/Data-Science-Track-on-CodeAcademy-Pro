@@ -80,3 +80,35 @@ JOIN customers
 select user_id,description
 from premium_users, plans
 where plans.id = premium_users.membership_plan_id;
+
+SELECT plays.user_id,
+   plays.play_date,
+   songs.title
+FROM plays
+JOIN songs
+  ON plays.song_id = songs.id;
+  
+  SELECT users.id
+FROM users
+LEFT JOIN premium_users
+	ON users.id = premium_users.user_id
+WHERE premium_users.user_id IS NULL;
+
+
+WITH january AS (
+  SELECT *
+  FROM plays
+  WHERE strftime("%m", play_date) = '01'
+),
+february AS (
+  SELECT *
+  FROM plays
+  WHERE strftime("%m", play_date) = '02'
+
+)
+select january.user_id 
+from january
+left join february
+on january.user_id = february.user_id
+WHERE february.user_id IS NULL;
+
