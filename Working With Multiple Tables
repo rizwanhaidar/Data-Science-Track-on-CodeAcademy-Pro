@@ -76,3 +76,7 @@ FROM previous_query
 JOIN customers
   ON previous_query.customer_id = customers.customer_id;
   
+
+select user_id,description
+from premium_users, plans
+where plans.id = premium_users.membership_plan_id;
