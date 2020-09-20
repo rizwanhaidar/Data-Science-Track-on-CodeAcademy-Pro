@@ -112,3 +112,41 @@ left join february
 on january.user_id = february.user_id
 WHERE february.user_id IS NULL;
 
+
+
+select premium_users.user_id, premium_users.purchase_date, premium_users.cancel_date, months.months 
+from premium_users
+cross join months;
+
+
+SELECT premium_users.user_id,
+  months.months,
+  CASE
+    WHEN (
+      premium_users.purchase_date <= months.months
+      )
+      AND
+      (
+        premium_users.cancel_date >= months.months
+        OR
+        premium_users.cancel_date IS NULL
+      )
+    THEN 'active'
+    ELSE 'not_active'
+  END AS 'status'
+FROM premium_users
+CROSS JOIN months;
+
+
+SELECT *
+FROM songs
+UNION
+SELECT * 
+FROM bonus_songs
+LIMIT 10;
+
+SELECT '2017-01-01' as month
+UNION
+SELECT '2017-02-01' as month
+UNION
+SELECT '2017-03-01' as month;
