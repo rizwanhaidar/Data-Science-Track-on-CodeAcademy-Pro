@@ -164,3 +164,24 @@ SELECT songs.title,
 FROM play_count
 JOIN songs
 	ON play_count.song_id = songs.id;
+
+
+SELECT * FROM trips;
+
+SELECT * FROM riders;
+
+SELECT * FROM cars;
+
+#id
+#id
+#id
+
+select * 
+from riders
+cross join cars;
+
+
+select * 
+from trips
+left join riders 
+on trips.rider_id = riders.id;
